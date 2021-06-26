@@ -18,11 +18,11 @@ public class TesteAluno {
 		a1.setIdade(26);
 		a1.setCurso(c1); // No momento da chamada desse atributo no print devemos lembrar de usar : c1.getCurso().getNome() para acessar o atributo nome da classe Curso
 
-		Aluno a2=new Aluno();
+		Aluno a2=new Aluno(); //Criação de novo objeto da classe Aluno
 		a2.setNome("Ana Lima");
 		a2.setCpf("703.895.314-96");
 		a2.setIdade(23);
-		a2.setCurso(c2); // No momento da chamada desse atributo no print devemos lembrar de usar : c2.getCurso().getNome() para acessar o atributo nome da classe Curso
+		a2.setCurso(c2); //No momento da chamada desse atributo no print devemos lembrar de usar : c2.getCurso().getNome() para acessar o atributo nome da classe Curso
 		 
 		
 		//Sysout para imprimir no console as informações
