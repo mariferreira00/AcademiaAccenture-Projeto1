@@ -4,30 +4,39 @@ public class TesteAluno {
 
 	public static void main(String[] args) { //Teste 
 		
-		Curso c1= new Curso(); //Criação de novo objeto da classe Curso
-		c1.setCodigo(1); // Utilizamos o sets declarado na classe
-		c1.setNome("Análise e Desenvolvimento de Sistemas");
+		RepositorioAlunosArray rep = new RepositorioAlunosArray(12);
 		
-		Curso c2=new Curso();
-		c2.setCodigo(2);
-		c2.setNome("Sistemas de Informação"); 
+		Curso c1 = new Curso(01, "Análise e Desenvolvimento de Sistemas"); // Criação de novo objeto da classe Curso
 		
-		Aluno a1=new Aluno(); //Criação de novo objeto da classe Aluno
-		a1.setNome("Maria"); // Utilizamos os sets declarado na classe
-		a1.setCpf("102.687.364-99");
-		a1.setIdade(26);
-		a1.setCurso(c1); // No momento da chamada desse atributo no print devemos lembrar de usar : c1.getCurso().getNome() para acessar o atributo nome da classe Curso
 
-		Aluno a2=new Aluno(); //Criação de novo objeto da classe Aluno
-		a2.setNome("Ana Lima");
-		a2.setCpf("703.895.314-96");
-		a2.setIdade(23);
-		a2.setCurso(c2); //No momento da chamada desse atributo no print devemos lembrar de usar : c2.getCurso().getNome() para acessar o atributo nome da classe Curso
-		 
+		Curso c2 = new Curso(02, "Sistemas de Informação");
 		
-		//Sysout para imprimir no console as informações
-		System.out.println("| Aluno(a): " + a1.getNome() + " | CPF: " + a1.getCpf() + " | Idade: " + a1.getIdade() + " | Curso: " +a1.getCurso().getNome() + " |");
-		System.out.println("| Aluno(a): " + a2.getNome() + " | CPF: " + a2.getCpf() + " | Idade: " + a2.getIdade() + " | Curso: " + a2.getCurso().getNome() + " |");
+
+		Aluno a1 = new Aluno("Maria Ferreira", "102.687.364-98", 26, c1); // Criação de novo objeto da classe Aluno
+		rep.inserir(a1);// Chamada do metodo inserir da classe repositórioAlunosArray
+
+		Aluno a2 = new Aluno("Ana Lima", "703.895.314-96", 23, c2); 
+		rep.inserir(a2);
+
+		Aluno a3 = new Aluno("Luana Silva", "911.452.698-26", 28, c2);
+		rep.inserir(a3);
+
+		// chamada do método para procurar aluno da classe RepositorioAlunosArray
+		Aluno procurado = rep.procurar("102.687.364-98");
+		if (procurado == null) { // validação do parâmetro passado utilizando as condicionais if else
+			System.out.println("Não existe nenhum aluno com o cpf informado");
+		} else {
+			System.out.println("Aluno encontrado com sucesso, nome:" + procurado.getNome() + ", cpf:  " + procurado.getCpf());
+		}
+
+		// chamada do método para remover aluno da classe RepositorioAlunosArray
+		procurado = rep.procurar("911.452.698-21");
+		if (procurado == null) {
+			System.out.println("Não existe nenhum aluno com o cpf informado");
+		} else {
+			rep.remover("911.452.698-21");
+			System.out.println("Aluno " + procurado.getNome() + " removido com sucesso!");
+		}
 	}
-
 }
+

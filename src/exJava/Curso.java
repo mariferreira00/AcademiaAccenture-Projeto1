@@ -26,7 +26,6 @@ public class Curso { //Classe Curso
 		this.codigo = codigo;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
