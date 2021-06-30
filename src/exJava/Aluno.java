@@ -1,55 +1,28 @@
 package exJava;
 
-public class Aluno { //Classe Aluno
-	private String nome; //atributos privados com seus respectivos tipos e nomes
-	private String cpf;
-	private int idade;
-	private Curso curso;
-	
-	public Aluno() { //Ctor vazio
-		
-	}
-	
-	public Aluno(String nome, String cpf, int idade, Curso curso) { //Ctor com os atributos da classe passados nor parâmetros
-		this.nome=nome;
-		this.cpf=cpf;
-		this.idade=idade;
-		this.curso=curso;
-	}
-	
-	//Getters e Setters
+public class Aluno  extends Pessoa{ //Criação da classe Aluno estendendo de Pessoa
+    private Curso curso;
 
-	public String getNome() {
-		return nome;
-	}
+    public Aluno(String nome, String cpf, int idade, Curso curso) { //ctor com parâmetros
+        super(nome, cpf, idade);
+        this.curso = curso;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public Aluno(String nome, String cpf) {
+        super(nome, cpf);
+    }
 
-	public String getCpf() {
-		return cpf;
-	}
+    public Aluno() {
+    }
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
 
-	public int getIdade() {
-		return idade;
-	}
+    public Curso getCurso() {
 
-	public void setIdade(int idade) {
-		this.idade = idade;
-	}
+        return curso;
+    }
 
-	public Curso getCurso() {
-		return curso;
-	}
+    public void setCurso(Curso curso) {
 
-	public void setCurso(Curso curso) {
-		this.curso = curso;
-	}
-	
-	
+        this.curso = curso;
+    }
 }
