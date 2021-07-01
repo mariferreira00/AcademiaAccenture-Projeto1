@@ -35,5 +35,12 @@ public class Curso { //Classe Curso
 		this.nome = nome;
 	}
 	
+	public String toString() {
+		return "ID - "
+				+ codigo
+				+ "| Curso: "
+				+ nome;
+				
+	}
 
 }

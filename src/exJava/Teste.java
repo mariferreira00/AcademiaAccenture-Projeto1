@@ -34,6 +34,10 @@ public class Teste {
 	            r.remover("888.999.555-11");
 	            System.out.println("Pessoa : "+ wtd.getNome()+ " - Status: removida com sucesso!");
 	        }
+	        
+	        System.out.println(a1.toString());
+	        
+	        System.out.println(p1);
 
 	    }
 	}

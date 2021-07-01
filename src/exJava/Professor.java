@@ -20,6 +20,17 @@ public class Professor extends Pessoa { //Criação da classe professor estendendo
     public void setSalario(double salario) {
         this.salario = salario;
     }
+    
+    public String toString() {
+    	return "| Professor(a): : "
+    			+ this.getNome()
+    			+ "| CPF: "
+    			+ this.getCpf()
+    			+ "| Idade: "
+    			+ this.getIdade()
+    			+ "| Salário: R$"
+    			+ salario;
+    }
 }
 
 
