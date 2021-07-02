@@ -17,6 +17,9 @@ public class Teste {
 	        r.inserir(a2);
 	        r.inserir(p1);
 	        
+	      //qtd de pessoas no repositorio
+			System.out.println("Total de Pessoas:" + RepositorioPessoasArray.getTotalDePessoas());
+	        
 	        
 	        Pessoa wtd = r.procurar("111.222.333-00");
 	        if (wtd == null) { // validação do parâmetro passado utilizando as condicionais if else
