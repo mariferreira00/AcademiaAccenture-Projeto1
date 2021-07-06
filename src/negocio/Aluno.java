@@ -1,4 +1,4 @@
-package exJava;
+package negocio;
 
 public class Aluno  extends Pessoa{ //Criação da classe Aluno estendendo de Pessoa
     private Curso curso;

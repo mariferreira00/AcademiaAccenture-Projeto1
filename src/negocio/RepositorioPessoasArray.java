@@ -1,7 +1,7 @@
-package exJava;
+package negocio;
 
 
-public class RepositorioPessoasArray {
+public class RepositorioPessoasArray implements RepositorioPessoas{
 	private Pessoa [] pessoas;
     private int indice;
     private static int totalDePessoas;
