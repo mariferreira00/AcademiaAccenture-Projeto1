@@ -1,3 +1,3 @@
-# Academia Java Accenture- Projeto Java Básico
+# Academia Java Accenture- Projeto Java Básico 1
 
-## Repositório do Projeto Java básico, executado durante a Academia Java Accenture.
+## Repositório do Projeto Java básico, executado durante o treinamento Academia Java Accenture.
