@@ -1,4 +1,4 @@
-package exJava;
+package negocio;
 
 public class Curso { //Classe Curso
 	
