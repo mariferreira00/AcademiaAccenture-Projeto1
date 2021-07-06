@@ -1,9 +1,7 @@
 package negocio;
 
 public interface RepositorioPessoas {
-	
-	 void inserir(Pessoa pessoa);
-	 Pessoa procurar(String numCPF);
-	 void remover(String numCPF);
-
+	public void inserir(Pessoa x);	
+	public Pessoa procurarString(String numCPF);	
+	public void remover(String numCPF);
 }
