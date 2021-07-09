@@ -1,4 +1,4 @@
-package exJava;
+package negocio;
 
 public class Curso { //Classe Curso
 	
@@ -26,7 +26,6 @@ public class Curso { //Classe Curso
 		this.codigo = codigo;
 	}
 
-
 	public String getNome() {
 		return nome;
 	}
@@ -36,5 +35,12 @@ public class Curso { //Classe Curso
 		this.nome = nome;
 	}
 	
+	public String toString() {
+		return "ID - "
+				+ codigo
+				+ "| Curso: "
+				+ nome;
+				
+	}
 
 }
