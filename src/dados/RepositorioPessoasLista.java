@@ -15,31 +15,45 @@ public class RepositorioPessoasLista implements RepositorioPessoas {
 	}
 	
 
-	public void inserir(Pessoa x) {
-	pessoas.add(x);
-	
+	public void inserir(Pessoa x) throws RepositorioException {
+		 
+		 for(Pessoa p : pessoas) {
+			 if(p.getCpf().equals(x.getCpf())) {
+				 throw new RepositorioException();
+			 }
+		 }
+		 pessoas.add(x);
 	}
+		
 
-	public Pessoa procurarString(String numCPF) {
+	public Pessoa procurarString(String numCPF) throws Exception {
+		
 		Pessoa procurada = null;
 		for (Pessoa pessoa: pessoas) {
-			if(pessoa.getCpf().equals(numCPF))
+			if(pessoa.getCpf().equals(numCPF)) {
+				System.out.println("CPF encontrado!");
 				procurada = pessoa;
+			}
 		}
 		return procurada;
 	}
 
-
-	public void remover(String numCPF) {
+	
+	public void remover(String numCPF) throws Exception {
 		int posicao = -1;
 		for (Pessoa pessoa: pessoas) {
 			if (pessoa.getCpf().equals(numCPF)) {
 				posicao = pessoas.indexOf(pessoa);
 				break;
+				
 			}
 		}
-		if (posicao != -1)
+		if (posicao != -1) {
 			pessoas.remove(posicao);
+			System.out.println("CPF removido: "+numCPF);
+		}else {
+			throw new Exception("Exception message");
+		}
 	}
 
 	public List<Pessoa> listarPessoas(){
